@@ -1,0 +1,3 @@
+[submodule "Art/Scripts"]
+	path = Art/Scripts
+	url = https://github.com/kmahabeer/obsidian-scripts.git
