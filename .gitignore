@@ -4,4 +4,4 @@
 # Except for these files:
 !.gitignore
 !*Scripts*
-!Art/Scripts
+!Art/Scripts/*
