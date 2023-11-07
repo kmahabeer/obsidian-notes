@@ -1,6 +1,10 @@
 # Ignore everything
-*
+*/*/*
+*/*.md
+GRE/*
 
 # Except for these files:
-!.gitignore
-!./Angry-Archer/_scripts/*
+!Angry-Archer/_scripts/*
+!Angry-Archer/_settings/*
+!Angry-Archer/_templates/*
+!Angry-Archer/.obsidian/*
