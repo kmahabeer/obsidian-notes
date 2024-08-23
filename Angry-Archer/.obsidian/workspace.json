@@ -1,0 +1,610 @@
+{
+  "main": {
+    "id": "0f47f98a6414234f",
+    "type": "split",
+    "children": [
+      {
+        "id": "aef58be144764ff1",
+        "type": "split",
+        "children": [
+          {
+            "id": "a0e05abdbaa1cb8a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "595ec94d692b5d7e",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "pinned": true
+                }
+              },
+              {
+                "id": "6315809e533125bb",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "_config_management/_testing/test-linter-regex.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": true,
+                      "showTags": true,
+                      "showAttachments": true,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [
+                        {
+                          "query": "tag:#L1_topic",
+                          "color": {
+                            "a": 1,
+                            "rgb": 16777215
+                          }
+                        },
+                        {
+                          "query": "tag:#L2_topic",
+                          "color": {
+                            "a": 1,
+                            "rgb": 16776960
+                          }
+                        },
+                        {
+                          "query": "tag:#L3_topic",
+                          "color": {
+                            "a": 1,
+                            "rgb": 16734464
+                          }
+                        },
+                        {
+                          "query": "tag:#reference  ",
+                          "color": {
+                            "a": 1,
+                            "rgb": 2212929
+                          }
+                        }
+                      ],
+                      "collapse-display": true,
+                      "showArrow": true,
+                      "textFadeMultiplier": -3,
+                      "nodeSizeMultiplier": 2.69767123287671,
+                      "lineSizeMultiplier": 2.46905110677083,
+                      "collapse-forces": true,
+                      "centerStrength": 0.33600782778865,
+                      "repelStrength": 20,
+                      "linkStrength": 0.667906066536204,
+                      "linkDistance": 500,
+                      "scale": 0.05034419294025656,
+                      "close": true
+                    }
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "dd4fd883c7af97c2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "574201cbf0546754",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/Lists/TODO List.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "95da458685b6385d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/Lists/Shopping List - Food.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "067c6a77eab96d54",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/Lists/Reading List.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "821e81202a0c6272",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/_random/Artists to research.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "1923e7a7278ac9c4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/Lists/Watch List.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "ed842b3614ea02d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0315c9c84d180e4c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_journal/_random/Advice.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "27a034b6e85a8f12",
+        "type": "split",
+        "children": [
+          {
+            "id": "1e6b24e226e5c64c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "504e9c2dc000cf06",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_resources/books/non_fiction/Robert McKee - Story/Robert McKee - Story - Chapter 2 - The Structure Spectrum.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "598183518c064868",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_resources/books/non_fiction/John Truby - The Anatomy of Story/_John Truby - The Anatomy of Story.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a89ffdd5d108dcbc",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_resources/books/non_fiction/John Truby - The Anatomy of Story/John Truby - The Anatomy of Story - Chapter 2 - Premise.md",
+                    "mode": "preview",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "655cc8efdc2bc874",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6a71e6e25ad74dc2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "1-Humanities/Storytelling/Concept/Premise (narrative).md",
+                    "mode": "preview",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "e7c29f71c0588870",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "1-Humanities/Storytelling/Concept/Designing principle.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "1ba0a857bcf3554d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_resources/other/personal_development_videos/YouTube - Justin Sung - How to Force Your Brain To Be Motivated (when you don’t feel like it).md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "77f9f17d71fbd1b1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_config_management/Systems/System-Productivity.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "a6334a2c6bee1c68",
+        "type": "split",
+        "children": [
+          {
+            "id": "d04d1200d5e6b476",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9ca57fb13a31ce85",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "3-STEM/Biology/Anatomy/_Anatomy.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "7c4668dbf6e30d90",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "4-Vocational/Culinary Arts/Cooking/Cooking Techniques/Cooking Techniques.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "ce81aa91b011b775",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_config_management/_testing/test-linter-regex.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a8748a80847e43f6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_config_management/_settings/Color Theme.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "6fe93e937551e1c4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5a2afe6c981a391d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "School/Applications/UT Austin - Online Masters Computer Science.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "7cafb16d449eba2c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "School/Applications/Georgia Tech - OMCS.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "e564cdd76e3acaea",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "School/Applications/Grad School Applications.md",
+                    "mode": "preview",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "847edacc45e251df",
+    "type": "split",
+    "children": [
+      {
+        "id": "0eedcdab3dacdf04",
+        "type": "tabs",
+        "dimension": 61.42857142857143,
+        "children": [
+          {
+            "id": "4677496330cb3dfc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0bd804c1dd49c1de",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "820ba628d4eeedcb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "eisenho",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "191cd2c1eb1d4187",
+        "type": "tabs",
+        "dimension": 38.57142857142858,
+        "children": [
+          {
+            "id": "dd6291b1943712b9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "40f4ae2aa32306c4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "1d3b517853e4d697",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287.5124969482422
+  },
+  "right": {
+    "id": "816594c7477e9330",
+    "type": "split",
+    "children": [
+      {
+        "id": "537f822ff2f5ea05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8416c31f16a6eb8a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_config_management/_testing/test-linter-regex.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e500b7932b99e86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23fc3f4a9c43f705",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_config_management/_testing/test-linter-regex.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "0eec0fe0e1f39ad0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc70bc08e50fea46",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_config_management/_testing/test-linter-regex.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 241.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "markdown-importer:Open format converter": false,
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "obsidian-book-search-plugin:Create new book note": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "ce81aa91b011b775",
+  "lastOpenFiles": [
+    "_resources/other/personal_development_videos/YouTube - Justin Sung - How to Force Your Brain To Be Motivated (when you don’t feel like it).md",
+    "_config_management/_settings/Color Theme.md",
+    "_config_management/_settings/Obsidian Snippets.md",
+    "_config_management/_testing/test-linter-regex.md",
+    "School/Applications/Grad School Applications.md",
+    "_config_management/Systems/System-Productivity.md",
+    "_config_management/Systems/Subsystems/Task Management System/System-Task_Management.md",
+    "4-Vocational/Culinary Arts/Cooking/Cooking Techniques/Cooking Techniques.md",
+    "_resources/books/non_fiction/John Truby - The Anatomy of Story/John Truby - The Anatomy of Story - Chapter 2 - Premise.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Cognitive defusion.md",
+    "2-Social Sciences/Psychology/Basic psychology/Basic psychology.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Cognitive fusion.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapies/_List of psychotherapies.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapies/Acceptance and commitment therapy (ACT).md",
+    "2-Social Sciences/Psychology/Applied Psychology/Applied Psychology.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapy.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Clinical Behavior Analysis.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapies/Behavior therapy.md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapies/Cognitive behavioral therapy (CBT).md",
+    "2-Social Sciences/Psychology/Applied Psychology/Psychotherapy/Psychotherapies/Cognitive therapy.md",
+    "_journal/Lists/TODO List.md",
+    "School/Applications/UT Austin - Online Masters Computer Science.md",
+    "1-Humanities/Storytelling/Concept/Designing principle.md",
+    "_config_management/_templates/Template-Project.md",
+    "1-Humanities/Storytelling/Narrative Forms/Comics and Graphic Novels/Comics & Graphic Novels.md",
+    "1-Humanities/Storytelling/Narrative Forms/Comics and Graphic Novels/How to buy comics.md",
+    "_journal/Lists (1)",
+    "1-Humanities/Storytelling/Narrative Forms/Comics and Graphic Novels",
+    "1-Humanities/Storytelling/Concept",
+    "Projects/Project-classifli/Architecture/client",
+    "Projects/Project-classifli/Architecture/hermes",
+    "Projects/Project-classifli/Architecture/apollo",
+    "Projects/Project-classifli/Project Lifecycle/Untitled",
+    "Projects/Project-classifli/Architecture/Athena",
+    "3-STEM/Open Source",
+    "Projects/Project-classifli/Project Lifecycle",
+    "_resources/books/non_fiction/John Truby - The Anatomy of Story/_attachments/_John Truby - The Anatomy of Story 2024_08_01-21_58_37.png",
+    "Projects/Project-Short_Story_001/_attachments/Project-Short_Story_001 2024_07_10-19_27_31.excalidraw.png",
+    "Projects/Project-classifli/Architecture/_attachments/Pasted image 20240629200501.png",
+    "3-STEM/Software Engineering/DevOps/Docker/_mind_maps/_attachments/Docker 2024_06_28-19_09_01.excalidraw.png",
+    "3-STEM/Software Engineering/DevOps/Docker/_mind_maps/_attachments/_attachments/Pasted Image 20240628202501_854.png",
+    "Projects/Project-classifli/Architecture/_attachments/Organization-Microservice 2024_06_26-18_55_54.excalidraw.png",
+    "Projects/Project-classifli/Architecture/_attachments/Annotation-Microservice 2024_06_26-18_48_10.excalidraw.png",
+    "School/Applications/_attachments/Pasted image 20240626080935.png",
+    "Excalidraw/excalidraw-2024_06_22-13_43_00.excalidraw.png",
+    "_config_management/Systems/Subsystems/Naming Convention System/System-Naming_Convention-v01/Subsystems/_attachments/Pasted image 20240616122018.png",
+    "_config_management/Systems/Subsystems/Knowledge Management Systems/2023-11-07-reference_automation_pipeline.canvas",
+    "_resources/art/references/mood_boards/2023-11-03-001.canvas",
+    "Untitled.canvas"
+  ]
+}

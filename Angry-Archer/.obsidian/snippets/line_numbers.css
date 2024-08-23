@@ -1,0 +1,11 @@
+/* ROW NUMBERS IN GUTTER SOURCE / LIVE PREVIEW */
+.markdown-source-view.mod-cm6 .cm-gutters {
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 0.85rem;
+}
+
+/* POSITION OF ROW NUMBERS IN GUTTER SOURCE / LIVE PREVIEW */
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding: 10px;
+}

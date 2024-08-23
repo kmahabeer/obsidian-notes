@@ -1,0 +1,43 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "_config_management/_templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "_config_management/_scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "_journal/_ideas",
+      "template": "_config_management/_templates/Template-Idea.md"
+    },
+    {
+      "folder": "_resources/art/references/videos",
+      "template": "_config_management/_templates/Template-Video.md"
+    },
+    {
+      "folder": "_journal/Journal",
+      "template": "_config_management/_templates/Template-Journal.md"
+    },
+    {
+      "folder": "_journal/_quotes",
+      "template": "_config_management/_templates/Template-Quote.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}

@@ -1,0 +1,11 @@
+/* for 'code block' in preview mode */
+.markdown-preview-view pre > code {
+	/* color: green; */
+	/* font-size: 30px; */
+}
+
+/* for 'inline code block' in preview mode */
+.markdown-preview-view p > code {
+	color: rgba(255, 255, 255, 0.755);
+	/* font-size: 20px; */
+}

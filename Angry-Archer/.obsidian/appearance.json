@@ -1,0 +1,18 @@
+{
+  "accentColor": "",
+  "theme": "obsidian",
+  "baseFontSize": 14,
+  "enabledCssSnippets": [
+    "clean-embeds-all",
+    "style_tags",
+    "custom-callouts",
+    "style_code",
+    "line_numbers",
+    "mermaid",
+    "style-footnotes"
+  ],
+  "cssTheme": "Minimal",
+  "nativeMenus": true,
+  "translucency": false,
+  "showViewHeader": true
+}

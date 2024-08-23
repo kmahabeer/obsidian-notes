@@ -1,0 +1,60 @@
+/* .HyperMD-footnote,
+.cm-hmd-footnote,
+.cm-inline-footnote,
+.cm-hmd-barelink {
+	color: rgba(var(--text-faint), 0.5);
+	font-size: large;
+} */
+
+/* Footnote styling - works for me w/ inline footnotes */
+/* .footnotes-list {
+	font-size: 12px;
+} */
+
+/* .markdown-preview-section .footnotes {
+	font-size: 0.9rem; */
+/* font-size: 90%; */
+/* color: rgba(var(--base3), 0.5) */
+/* } */
+/* 
+.HyperMD-footnote, .cm-hmd-footnote {
+    font: large;
+    font-size: 0.9rem;
+} */
+
+/* .footnotes p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+} */
+
+/* .is-flashing {
+	transition: background-color 1s ease;
+	background-color: orange;
+} */
+
+/* a.footnote-link {
+    color: rgba(var(--base3), 0.5);
+    color: var(--text-faint);
+} */
+
+/* Footnote styling - smaller font */
+/* .footnote-link.mod-highlighted {
+    background-color: var(--orange);
+    color: var(--base3);
+} */
+
+.markdown-preview-view .footnotes,
+.markdown-preview-section .footnotes,
+pre.HyperMD-footnote.CodeMirror-line {
+	font-size: 100%;
+	/* font-family: var(--font-monospace); */
+}
+
+/* Setting the gap above and below a hor. footnote line
+/* if this code block is deleted from your CSS file, the space above and below the footnote line jumps up, but changing the px values has no effect
+/* footnote lines gaps can also be set with a general hr rule - see section Lines */
+.markdown-preview-view .footnotes hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: none;
+}
