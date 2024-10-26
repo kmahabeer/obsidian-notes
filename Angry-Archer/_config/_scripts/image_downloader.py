@@ -9,7 +9,7 @@ def generate_random_name(extension):
 
 
 # Function to download an image from a URL
-def download_image(url, download_folder="images"):
+def download_image(url, download_folder):
     # Ensure the download folder exists
     os.makedirs(download_folder, exist_ok=True)
 
@@ -20,7 +20,7 @@ def download_image(url, download_folder="images"):
         extension = ".jpg"  # Default extension if none is found in the URL
 
     # Generate a random image name
-    image_name = generate_random_name(extension)
+    image_name = "img-" + generate_random_name(extension)
     image_path = os.path.join(download_folder, image_name)
 
     try:
@@ -53,21 +53,28 @@ def update_files(
     with open(download_queue_file, "r") as f:
         queue_content = f.readlines()
 
-    # Regular expression to find URLs in bullet points
-    url_pattern = r"-\s*(https?://\S+)"
+    url_pattern = r"-\s*(https?://\S+)"  # Pattern to match URLs
+    folder_pattern = r"###\s*(.+)"  # Pattern to match H3 folder paths
 
-    # Extract URLs from the queue
+    current_folder = None  # Variable to hold the current destination folder
     new_queue = []
     completed = []
 
     for line in queue_content:
-        match = re.match(url_pattern, line.strip())
-        if match:
-            # Extract the image URL
-            url = match.group(1)
-            # Attempt to download the image
-            if download_image(url):
-                completed.append(line)  # Add the line to completed if download succeeds
+        # Check if the line is an H3 heading (the folder path)
+        folder_match = re.match(folder_pattern, line.strip())
+        if folder_match:
+            current_folder = folder_match.group(1).strip()
+            print(f"Destination folder: {current_folder}")
+            new_queue.append(line)  # Keep heading in the new qu eue
+            continue
+
+        # Check if the line contains a URL
+        url_match = re.match(url_pattern, line.strip())
+        if url_match and current_folder:
+            url = url_match.group(1)
+            if download_image(url, current_folder):
+                completed.append(line)  # Add to completed if download succeeds
             else:
                 new_queue.append(line)  # Keep in queue if download fails
         else:
