@@ -2,6 +2,16 @@ import requests
 import os
 import re
 import uuid
+from logger import Logger
+from datetime import datetime
+import time
+
+start_time = time.time()
+
+script_name = os.path.splitext(os.path.basename(__file__))
+log = Logger(f"logs/{script_name[0]}.log")
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+log.info(f"\nStarting {script_name} at {timestamp}")
 
 
 def generate_random_name(extension):
@@ -10,6 +20,8 @@ def generate_random_name(extension):
 
 # Function to download an image from a URL
 def download_image(url, download_folder):
+    log.info(f"Starting the image download process from {download_folder}.")
+
     # Ensure the download folder exists
     os.makedirs(download_folder, exist_ok=True)
 
@@ -20,29 +32,30 @@ def download_image(url, download_folder):
         extension = ".jpg"  # Default extension if none is found in the URL
 
     # Generate a random image name
-    image_name = "img-" + generate_random_name(extension)
+    image_name = "ref-" + generate_random_name(extension)
     image_path = os.path.join(download_folder, image_name)
 
     try:
-        print(f"Attempting to download {url}")
+        log.info(f"Attempting to download {url}")
         # Make the request to download the image
         response = requests.get(url, stream=True)
-        print(response)
+        log.info(f"Response: {response}")
+
         # Check if the request was successful
         if response.status_code == 200:
             # Write the content to a file
             with open(image_path, "wb") as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
-            print(f"Successfully downloaded: {image_name}")
+            log.info(f"Successfully downloaded: {image_name}")
             return True
         else:
-            print(
+            log.error(
                 f"Failed to download {url} - HTTP Status Code: {response.status_code}"
             )
             return False
     except Exception as e:
-        print(f"Error downloading {url}: {e}")
+        log.error(f"Error downloading {url}: {e}")
         return False
 
 
@@ -65,7 +78,7 @@ def update_files(
         folder_match = re.match(folder_pattern, line.strip())
         if folder_match:
             current_folder = folder_match.group(1).strip()
-            print(f"Destination folder: {current_folder}")
+            log.info(f"Destination folder: {current_folder}")
             new_queue.append(line)  # Keep heading in the new qu eue
             continue
 
@@ -74,6 +87,7 @@ def update_files(
         if url_match and current_folder:
             url = url_match.group(1)
             if download_image(url, current_folder):
+                time.sleep(3)
                 completed.append(line)  # Add to completed if download succeeds
             else:
                 new_queue.append(line)  # Keep in queue if download fails
@@ -88,8 +102,11 @@ def update_files(
     with open(completed_file, "a") as f:
         f.writelines(completed)
 
-    print("Download queue updated, completed downloads logged.")
+    log.info("Download queue updated, completed downloads logged.")
 
 
 # Run the function
 update_files()
+end_time = time.time()
+duration = end_time - start_time
+log.info(f"Script executed in {duration:.2f} seconds.\n")
