@@ -32,7 +32,7 @@ def download_image(url, download_folder):
         extension = ".jpg"  # Default extension if none is found in the URL
 
     # Generate a random image name
-    image_name = "ref-" + generate_random_name(extension)
+    image_name = generate_random_name(extension)
     image_path = os.path.join(download_folder, image_name)
 
     try:
