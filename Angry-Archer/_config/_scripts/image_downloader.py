@@ -18,6 +18,16 @@ def generate_random_name(extension):
     return f"{uuid.uuid4()}{extension}"
 
 
+def extract_header(line):
+    header_pattern = r"(#+)\s*(.+)"
+    header_match = re.match(header_pattern, line.strip())
+    if header_match:
+        header_level = len(header_match.group(1))  # Count the number of '#' for level
+        header_text = header_match.group(2).strip()  # Extract the text after the '#'
+        return header_level, header_text
+    return None
+
+
 # Function to download an image from a URL
 def download_image(url, download_folder):
     log.info(f"Starting the image download process from {download_folder}.")
@@ -67,29 +77,38 @@ def update_files(
         queue_content = f.readlines()
 
     url_pattern = r"-\s*(https?://\S+)"  # Pattern to match URLs
-    folder_pattern = r"###\s*(.+)"  # Pattern to match H3 folder paths
+    # folder_pattern = r"###\s*(.+)"  # Pattern to match H3 folder paths
 
-    current_folder = None  # Variable to hold the current destination folder
+    # current_folder = None  # Variable to hold the current destination folder
+    current_headers = []  # List to store the current hierarchy of headers
     new_queue = []
     completed = []
 
     for line in queue_content:
-        # Check if the line is an H3 heading (the folder path)
-        folder_match = re.match(folder_pattern, line.strip())
-        if folder_match:
-            current_folder = folder_match.group(1).strip()
-            log.info(f"Destination folder: {current_folder}")
+        # # Check if the line is an H3 heading (the folder path)
+        # folder_match = re.match(folder_pattern, line.strip())
+        header_details = extract_header(line)
+        if header_details:  # folder_match:
+            header_level, header_text = header_details
+
+            if len(current_headers) >= header_level:
+                current_headers = current_headers[: header_level - 1]
+            current_headers.append(header_text)
+            # current_folder = folder_match.group(1).strip()
+            log.info(f"Destination folder: {'/'.join(current_headers)}")
             new_queue.append(line)  # Keep heading in the new qu eue
             continue
 
         # Check if the line contains a URL
         url_match = re.match(url_pattern, line.strip())
-        if url_match and current_folder:
+        if url_match and current_headers:
             url = url_match.group(1)
-            if download_image(url, current_folder):
+            download_folder = os.path.join(*current_headers)
+            if download_image(url, download_folder):
                 time.sleep(3)
                 completed.append(line)  # Add to completed if download succeeds
             else:
+                log.error(f"No headers found for URL {url}. Skipping.")
                 new_queue.append(line)  # Keep in queue if download fails
         else:
             new_queue.append(line)  # Keep non-URL lines
