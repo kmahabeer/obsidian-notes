@@ -20,8 +20,6 @@ def extract_header(line):
 
 # Function to download an image from a URL
 def download_image(url, download_folder):
-    log.info(f"Starting the image download process from {download_folder}.")
-
     # Ensure the download folder exists
     os.makedirs(download_folder, exist_ok=True)
 
@@ -36,10 +34,10 @@ def download_image(url, download_folder):
     image_path = os.path.join(download_folder, image_name)
 
     try:
-        log.info(f"Attempting to download {url}")
+        log.info(f"Attempting to download image from {url}")
         # Make the request to download the image
         response = requests.get(url, stream=True)
-        log.info(f"Response: {response}")
+        log.info(f"HTTP Status Code: {response.status_code}")
 
         # Check if the request was successful
         if response.status_code == 200:
@@ -47,7 +45,9 @@ def download_image(url, download_folder):
             with open(image_path, "wb") as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
-            log.info(f"Successfully downloaded: {image_name}")
+            log.info(
+                f"Successfully downloaded image as {image_name} in {download_folder}"
+            )
             return True
         else:
             log.error(
@@ -86,7 +86,6 @@ def update_files(
                 current_headers = current_headers[: header_level - 1]
             current_headers.append(header_text)
             # current_folder = folder_match.group(1).strip()
-            log.info(f"Destination folder: {'/'.join(current_headers)}")
             new_queue.append(line)  # Keep heading in the new qu eue
             continue
 
@@ -112,7 +111,16 @@ def update_files(
     with open(completed_file, "a") as f:
         f.writelines(completed)
 
-    log.info("Download queue updated, completed downloads logged.")
+    if len(completed) == 0:
+        log.info("No images downloaded.")
+    elif len(completed) == 1:
+        log.info(
+            f"Download queue updated, {len(completed)} image downloaded, completed downloads logged."
+        )
+    elif len(completed) > 1:
+        log.info(
+            f"Download queue updated, {len(completed)} images downloaded, completed downloads logged."
+        )
 
 
 if __name__ == "__main__":
@@ -122,7 +130,7 @@ if __name__ == "__main__":
 
     script_name = os.path.splitext(os.path.basename(__file__))
     log = Logger(f"logs/{script_name[0]}.log")
-    log.info(f"\nStarting {script_name} at {timestamp_start}")
+    log.info(f"Starting script {os.path.basename(__file__)} at {timestamp_start}")
 
     update_files()
 
@@ -130,5 +138,5 @@ if __name__ == "__main__":
     timestamp_end = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     duration = end_time - start_time
 
-    log.info(f"\nEnding {script_name} at {timestamp_end}")
+    log.info(f"Ending script {os.path.basename(__file__)} at {timestamp_end}")
     log.info(f"Script executed in {duration:.2f} seconds.\n")
