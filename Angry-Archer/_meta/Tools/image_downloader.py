@@ -73,7 +73,8 @@ def download_image(url, download_folder):
 
 # Function to update the markdown files
 def update_files(
-    download_queue_file="download_queue.md", completed_file="completed_downloads.md"
+    download_queue_file="image_downloader/download_queue.md",
+    completed_file="image_downloader/completed_downloads.md",
 ):
     with open(download_queue_file, "r") as f:
         queue_content = f.readlines()
