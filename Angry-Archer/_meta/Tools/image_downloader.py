@@ -7,14 +7,6 @@ from logger import Logger
 from datetime import datetime
 import time
 
-sys.dont_write_bytecode = True
-start_time = time.time()
-
-script_name = os.path.splitext(os.path.basename(__file__))
-log = Logger(f"logs/{script_name[0]}.log")
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-log.info(f"\nStarting {script_name} at {timestamp}")
-
 
 def generate_random_name(extension):
     return f"{uuid.uuid4()}{extension}"
@@ -127,8 +119,20 @@ def update_files(
     log.info("Download queue updated, completed downloads logged.")
 
 
-# Run the function
-update_files()
-end_time = time.time()
-duration = end_time - start_time
-log.info(f"Script executed in {duration:.2f} seconds.\n")
+if __name__ == "__main__":
+    sys.dont_write_bytecode = True
+    start_time = time.time()
+    timestamp_start = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    script_name = os.path.splitext(os.path.basename(__file__))
+    log = Logger(f"logs/{script_name[0]}.log")
+    log.info(f"\nStarting {script_name} at {timestamp_start}")
+
+    update_files()
+
+    end_time = time.time()
+    timestamp_end = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    duration = end_time - start_time
+
+    log.info(f"\nEnding {script_name} at {timestamp_end}")
+    log.info(f"Script executed in {duration:.2f} seconds.\n")
