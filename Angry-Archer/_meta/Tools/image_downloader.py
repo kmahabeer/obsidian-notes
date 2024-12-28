@@ -18,30 +18,23 @@ def extract_header(line):
     return None
 
 
-# Function to download an image from a URL
 def download_image(url, download_folder):
-    # Ensure the download folder exists
     os.makedirs(download_folder, exist_ok=True)
 
-    # Extract the file extension from the URL, default to .jpg if no extension is found
     if "." in url.split("/")[-1]:
         extension = os.path.splitext(url.split("/")[-1])[1]
     else:
-        extension = ".jpg"  # Default extension if none is found in the URL
+        extension = ".jpg"
 
-    # Generate a random image name
     image_name = f"{uuid.uuid4()}{extension}"
     image_path = os.path.join(download_folder, image_name)
 
     try:
         log.info(f"Attempting to download image from {url}")
-        # Make the request to download the image
         response = requests.get(url, stream=True)
         log.info(f"HTTP Status Code: {response.status_code}")
 
-        # Check if the request was successful
         if response.status_code == 200:
-            # Write the content to a file
             with open(image_path, "wb") as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
@@ -59,7 +52,6 @@ def download_image(url, download_folder):
         return False
 
 
-# Function to update the markdown files
 def update_files(
     download_queue_file="image_downloader/download_queue.md",
     completed_file="image_downloader/completed_downloads.md",
@@ -68,18 +60,14 @@ def update_files(
         queue_content = f.readlines()
 
     url_pattern = r"-\s*(https?://\S+)"  # Pattern to match URLs
-    # folder_pattern = r"###\s*(.+)"  # Pattern to match H3 folder paths
 
-    # current_folder = None  # Variable to hold the current destination folder
     current_headers = []  # List to store the current hierarchy of headers
     new_queue = []
     completed = []
 
     for line in queue_content:
-        # # Check if the line is an H3 heading (the folder path)
-        # folder_match = re.match(folder_pattern, line.strip())
         header_details = extract_header(line)
-        if header_details:  # folder_match:
+        if header_details:
             header_level, header_text = header_details
 
             if len(current_headers) >= header_level:
