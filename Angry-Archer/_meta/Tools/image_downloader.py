@@ -8,10 +8,6 @@ from datetime import datetime
 import time
 
 
-def generate_random_name(extension):
-    return f"{uuid.uuid4()}{extension}"
-
-
 def extract_header(line):
     header_pattern = r"(#+)\s*(.+)"
     header_match = re.match(header_pattern, line.strip())
@@ -36,7 +32,7 @@ def download_image(url, download_folder):
         extension = ".jpg"  # Default extension if none is found in the URL
 
     # Generate a random image name
-    image_name = generate_random_name(extension)
+    image_name = f"{uuid.uuid4()}{extension}"
     image_path = os.path.join(download_folder, image_name)
 
     try:
