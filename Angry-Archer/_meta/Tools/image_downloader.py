@@ -2,10 +2,12 @@ import requests
 import os
 import re
 import uuid
+import sys
 from logger import Logger
 from datetime import datetime
 import time
 
+sys.dont_write_bytecode = True
 start_time = time.time()
 
 script_name = os.path.splitext(os.path.basename(__file__))
